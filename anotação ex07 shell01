@@ -1,0 +1,30 @@
+ EX 07
+
+cat /etc/passwd | grep -v -E "#." | sed -n "2~2p" | sed -e "s/:.*//" | rev | sort -r | sed -n "${FT_LINE1},${FT_LINE2}p" | awk '{printf "%s%s", sep, $0; sep=", "}' | awk '{printf "%s.", $0}'
+
+
+cat /etc/passwd: exibe o conteúdo do arquivo "/etc/passwd".
+
+grep -v -E "#.": remove todas as linhas que começam com "#" (comentários).
+
+sed -n "2~2p": exibe apenas as linhas ímpares, começando pela segunda.
+
+sed -e "s/:.*//": remove tudo após o primeiro caractere ":" em cada linha.
+
+rev: inverte cada linha (ou seja, o login fica ao contrário).
+
+sort -r: ordena as linhas em ordem alfabética inversa.
+
+sed -n "${FT_LINE1},${FT_LINE2}p": exibe apenas as linhas compreendidas entre FT_LINE1 e FT_LINE2, que são variáveis de ambiente que devem ser definidas antes de executar o comando.
+
+awk '{printf "%s%s", sep, $0; sep=", "}': junta as linhas em uma única linha, separando-as com vírgula.
+
+awk '{printf "%s.", $0}': adiciona um ponto no final da linha.
+
+
+
+
+
+ EX 08
+ 
+ 

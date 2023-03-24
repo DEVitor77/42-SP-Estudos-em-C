@@ -1,0 +1,181 @@
+Volkrom — Hoje às 12:57
+ex00
+#include <stdio.h>
+int    main(void)
+{
+    int number = 0;
+
+    ft_ft(&number);
+    printf("42 == %d", number);
+}
+
+ex01
+
+#include <stdio.h>
+int    main(void)
+{
+ 	int n1 = 0;
+	int *n2 = &n1;
+	int **n3 = &n2;
+	int ***n4 = &n3;
+	int ****n5 = &n4;
+	int *****n6 = &n5;
+	int ******n7 = &n6;
+	int *******n8 = &n7;
+	int ********n9 = &n8;
+
+    ft_ultimate_ft(&n9);
+    printf("42 == %d", n1);
+}
+
+ex02
+
+#include <stdio.h>
+int    main(void)
+{
+    int    a = 2;
+    int    b = 4;
+
+    ft_swap(&a, &b);
+    printf("a = 4 = %d\n", a);
+    printf("b = 2 = %d\n", b);
+}
+
+ex03
+
+#include <stdio.h>
+int    main(void)
+{
+    int div, mod;
+
+    ft_div_mod(123, 42, &div, &mod);
+
+    printf("expected: 2,  result: %d\n", div);
+    printf("expected: 39, result: %d\n", mod);
+
+    ft_div_mod(42, 42, &div, &mod);
+
+    printf("expected: 1,  result: %d\n", div);
+    printf("expected: 0,  result: %d\n", mod);
+    return (0);
+}
+
+ex04
+
+#include <stdio.h>
+
+int    main(void)
+{
+    int div, mod;
+
+    div = 123;
+    mod = 42;
+    ft_ultimate_div_mod(&div, &mod);
+
+    printf("expected: 2,  result: %d\n", div);
+    printf("expected: 39, result: %d\n", mod);
+
+    div = 42;
+    mod = 42;
+    ft_ultimate_div_mod(&div, &mod);
+
+    printf("expected: 1,  result: %d\n", div);
+    printf("expected: 0,  result: %d\n", mod);
+    return (0);
+}
+
+ex05
+
+int    main(void)
+{
+    ft_putstr("O Leon é muito lindo\n");
+}
+
+ex06
+
+#include <stdio.h>
+#include <string.h>
+
+int    main(void)
+{
+    char    *str = "O Leon é muito lindo";
+    printf("%lu == %d\n", strlen(str), ft_strlen(str));
+}
+ex07
+
+#include <stdio.h>
+
+int    main(void)
+{
+    int    tab1[] = { 2, 3, 5, 7, 11, 13, 17 };
+    int    tab1_size = sizeof(tab1) / sizeof(tab1[0]);
+    ft_rev_int_tab(tab1, tab1_size);
+    printf("expected: 17 13 11 7 5 3 2  result:");
+    for (int i = 0; i < tab1_size; ++i)
+        printf(" %d", tab1[i]);
+    printf("\n");
+    int    tab2[] = { 1, 2, 3, 4, 5 };
+    int    tab2_size = sizeof(tab2) / sizeof(tab2[0]);
+    ft_rev_int_tab(tab2, tab2_size);
+    printf("expected: 5 4 3 2 1         result:");
+    for (int i = 0; i < tab2_size; ++i)
+        printf(" %d", tab2[i]);
+    printf("\n");
+    int    tab3[] = { 1, 2 };
+    int    tab3_size = sizeof(tab3) / sizeof(tab3[0]);
+    ft_rev_int_tab(tab3, tab3_size);
+    printf("expected: 2 1               result:");
+    for (int i = 0; i < tab3_size; ++i)
+        printf(" %d", tab3[i]);
+    printf("\n");
+    int    tab4[] = { 1 };
+    int    tab4_size = sizeof(tab4) / sizeof(tab4[0]);
+    ft_rev_int_tab(tab4, tab4_size);
+    printf("expected: 1                 result:");
+    for (int i = 0; i < tab4_size; ++i)
+        printf(" %d", tab4[i]);
+    printf("\n");
+    return (0);
+}
+
+
+ex08
+
+#include <stdio.h>
+
+int    main(void)
+{
+    int    tab1[] = { 5, 3, 17, 7, 13, 2, 11 };
+    int    tab1_size = sizeof(tab1) / sizeof(tab1[0]);
+    ft_sort_int_tab(tab1, tab1_size);
+    printf("expected: 2 3 5 7 11 13 17  result:");
+    for (int i = 0; i < tab1_size; ++i)
+        printf(" %d", tab1[i]);
+    printf("\n");
+
+    int    tab2[] = { 3, 4, 2, 5, 1 };
+    int    tab2_size = sizeof(tab2) / sizeof(tab2[0]);
+    ft_sort_int_tab(tab2, tab2_size);
+    printf("expected: 1 2 3 4 5         result:");
+    for (int i = 0; i < tab2_size; ++i)
+        printf(" %d", tab2[i]);
+    printf("\n");
+
+    int    tab3[] = { 2, 1 };
+    int    tab3_size = sizeof(tab3) / sizeof(tab3[0]);
+    ft_sort_int_tab(tab3, tab3_size);
+    printf("expected: 1 2               result:");
+    for (int i = 0; i < tab3_size; ++i)
+        printf(" %d", tab3[i]);
+    printf("\n");
+
+    int    tab4[] = { 1 };
+    int    tab4_size = sizeof(tab4) / sizeof(tab4[0]);
+    ft_sort_int_tab(tab4, tab4_size);
+    printf("expected: 1                 result:");
+    for (int i = 0; i < tab4_size; ++i)
+        printf(" %d", tab4[i]);
+    printf("\n");
+
+    return (0);
+}

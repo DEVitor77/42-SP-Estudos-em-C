@@ -1,0 +1,278 @@
+c1r5p3% pwd
+/nfs/homes/vvitor-d
+c1r5p3% ls
+ Desktop     Downloads	 'Minhas anotacoes'   Public	       Templates
+ DEVitor     goinfre	  Music		      Shell_00_check   Videos
+ Documents   meuarquivo   Pictures	      ssh-keygen
+c1r5p3% cd Shell_00_cheeck
+cd: no such file or directory: Shell_00_cheeck
+c1r5p3% cd Shell_00_check 
+c1r5p3% pwd
+/nfs/homes/vvitor-d/Shell_00_check
+c1r5p3% mkdir ex00
+c1r5p3% cat> z
+^Z
+zsh: suspended  cat > z
+c1r5p3% cat> z
+Z
+^Z
+zsh: suspended  cat > z
+c1r5p3% pwd
+/nfs/homes/vvitor-d/Shell_00_check
+c1r5p3% ls
+ex00  z
+c1r5p3% cat z
+Z
+c1r5p3% 
+c1r5p3% cd ..  
+c1r5p3% pwd
+/nfs/homes/vvitor-d
+c1r5p3% d Shell_00_check
+zsh: command not found: d
+c1r5p3% cd Shell_00_check
+c1r5p3% mkdir ex01
+c1r5p3% ls
+ex00  ex01  z
+c1r5p3% touch testShell00
+c1r5p3% ls
+ex00  ex01  testShell00  z
+c1r5p3% touch -t 202306012342 testshell00  
+c1r5p3% ls
+ex00  ex01  testshell00  testShell00  z
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate    0 Jun  1  2023 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+-rw-r--r-- 1 vvitor-d candidate    2 Feb 27 16:42 z
+c1r5p3% vim testshell00
+c1r5p3% ls -l
+total 16
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate   41 Feb 27 17:26 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+-rw-r--r-- 1 vvitor-d candidate    2 Feb 27 16:42 z
+c1r5p3% vim testshell00
+c1r5p3% ls -l
+total 16
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate   41 Feb 27 17:27 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+-rw-r--r-- 1 vvitor-d candidate    2 Feb 27 16:42 z
+c1r5p3% vim testsheel00
+c1r5p3% ls -l
+total 20
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate   40 Feb 27 17:28 testsheel00
+-rw-r--r-- 1 vvitor-d candidate   41 Feb 27 17:27 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+-rw-r--r-- 1 vvitor-d candidate    2 Feb 27 16:42 z
+c1r5p3% ls -l
+total 20
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate   40 Feb 27 17:28 testsheel00
+-rw-r--r-- 1 vvitor-d candidate   41 Feb 27 17:27 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+-rw-r--r-- 1 vvitor-d candidate    2 Feb 27 16:42 z
+c1r5p3% chmod u-w testshell00
+c1r5p3% ls -l
+total 20
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate   40 Feb 27 17:28 testsheel00
+-r--r--r-- 1 vvitor-d candidate   41 Feb 27 17:27 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+-rw-r--r-- 1 vvitor-d candidate    2 Feb 27 16:42 z
+c1r5p3% rm
+rm: missing operand
+Try 'rm --help' for more information.
+c1r5p3% rm testsheel00
+c1r5p3% rm testshell00
+rm: remove write-protected regular file 'testshell00'? sim
+c1r5p3% rm z
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r--r-- 1 vvitor-d candidate   41 Feb 27 17:27 testshell00
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+c1r5p3% rm testshell00
+rm: remove write-protected regular file 'testshell00'? yes
+c1r5p3% ls -l
+total 8
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate    0 Feb 27 16:57 testShell00
+c1r5p3% vim testShell00 
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod u-w
+chmod: missing operand after ‘u-w’
+Try 'chmod --help' for more information.
+c1r5p3% chmod u-w testShell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r--r-- 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod g*x testShell
+zsh: no matches found: g*x
+c1r5p3% chmod g*x testShell00
+zsh: no matches found: g*x
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r--r-- 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod g+w testShell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--rw-r-- 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod g-w testShell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r--r-- 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod o*x testShell00
+zsh: no matches found: o*x
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r--r-- 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod o+x testShell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r--r-x 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% chmod g+x testShel00
+chmod: cannot access 'testShel00': No such file or directory
+c1r5p3% chmod g+x testShell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r-xr-x 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% touch -t 202306012342 testshell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-rw-r--r-- 1 vvitor-d candidate    0 Jun  1  2023 testshell00
+-r--r-xr-x 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% rm testshell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r-xr-x 1 vvitor-d candidate   40 Feb 27 17:41 testShell00
+c1r5p3% touch -t 202306012342 testShell00
+c1r5p3% ls -l
+total 12
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate 4096 Feb 27 16:49 ex01
+-r--r-xr-x 1 vvitor-d candidate   40 Jun  1  2023 testShell00
+c1r5p3% tar -cf testShell00.tar testShell00
+c1r5p3% ls -l
+total 24
+drwxr-xr-x 2 vvitor-d candidate  4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate  4096 Feb 27 16:49 ex01
+-r--r-xr-x 1 vvitor-d candidate    40 Jun  1  2023 testShell00
+-rw-r--r-- 1 vvitor-d candidate 10240 Feb 27 17:59 testShell00.tar
+c1r5p3% 'pwd 
+quote> 
+c1r5p3% pwd
+/nfs/homes/vvitor-d/Shell_00_check
+c1r5p3% cd ..
+c1r5p3% git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-85b783fd-9e78-4143-84b1-633becbb0bde-4725834-vvitor-d Shel00
+Cloning into 'Shel00'...
+warning: You appear to have cloned an empty repository.
+c1r5p3% mv Shell_00_check/* Shel00
+c1r5p3% cd Shel00
+c1r5p3% ls 
+ex00  ex01  testShell00  testShell00.tar
+c1r5p3% git add .
+c1r5p3% git commit -m "subindoarq"
+[master (root-commit) 0b15af6] subindoarq
+ Committer: Valter Vitor da silva filho <vvitor-d@c1r5p3.42sp.org.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 insertion(+)
+ create mode 100644 testShell00
+ create mode 100644 testShell00.tar
+c1r5p3% git push
+Gitea: Unauthorized
+User: 2409:vvitor-d with Key: 195666:vvitor-d 2023-02-27T15:46:11Z is not authorized to write to vogsphere/intra-uuid-85b783fd-9e78-4143-84b1-633becbb0bde-4725834-vvitor-d.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+c1r5p3% history
+   59  ls -l
+   60  rm testshell00
+   61  ls -l
+   62  touch -t 202306012342 testShell00
+   63  ls -l
+   64  tar -cf testShell00.tar testShell00
+   65  ls -l
+   66  pwd
+   67  cd ..
+   68  git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-85b783fd-9e78-4143-84b1-633becbb0bde-4725834-vvitor-d Shel00
+   69  mv Shell_00_check/* Shel00
+   70  cd Shel00
+   71  ls 
+   72  git add .
+   73  git commit -m "subindoarq"
+   74  git push
+c1r5p3% ls -l  
+total 24
+drwxr-xr-x 2 vvitor-d candidate  4096 Feb 27 16:40 ex00
+drwxr-xr-x 2 vvitor-d candidate  4096 Feb 27 16:49 ex01
+-r--r-xr-x 1 vvitor-d candidate    40 Jun  1  2023 testShell00
+-rw-r--r-- 1 vvitor-d candidate 10240 Feb 27 17:59 testShell00.tar
+c1r5p3% ls
+ex00  ex01  testShell00  testShell00.tar
+c1r5p3% pwd
+/nfs/homes/vvitor-d/Shel00
+c1r5p3% ls
+ex00  ex01  testShell00  testShell00.tar
+c1r5p3% pwd
+/nfs/homes/vvitor-d/Shel00
+c1r5p3% cd ..
+c1r5p3% ls
+ Desktop   DEVitor   Documents	 Downloads   goinfre   meuarquivo  'Minhas anotacoes'   Music   Pictures   Public   Shel00   Shell_00_check   ssh-keygen   Templates   Videos
+c1r5p3% pw
+zsh: command not found: pw
+c1r5p3% pwd
+/nfs/homes/vvitor-d
+c1r5p3% cd Shel00 
+c1r5p3% ls
+ex00  ex01  testShell00  testShell00.tar
+c1r5p3% git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-10a1a1c3-7173-46c0-8e4b-c68b678da1a3-4726148-vvitor-d Shell  
+Cloning into 'Shell'...
+warning: You appear to have cloned an empty repository.
+c1r5p3% 
+c1r5p3% 
+

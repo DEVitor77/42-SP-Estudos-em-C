@@ -1,0 +1,135 @@
+c1r5p3% $> ssh-keygen -t ed25519
+zsh: command not found: $
+c1r5p3% 
+c1r5p3% 
+c1r5p3% $> ssh-keygen -t ed25519
+zsh: command not found: $
+c1r5p3% 
+c1r5p3% ssh-keygen -t ed25519   
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/nfs/homes/vvitor-d/.ssh/id_ed25519): 
+Created directory '/nfs/homes/vvitor-d/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /nfs/homes/vvitor-d/.ssh/id_ed25519
+Your public key has been saved in /nfs/homes/vvitor-d/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:b7qDidumkWw2FREt0tH3pSSVEwWdoxsPy6pJwNH03KM vvitor-d@c1r5p3.42sp.org.br
+The key's randomart image is:
++--[ED25519 256]--+
+|     .+=.  .+*.. |
+|    . o+ooo.+ =  |
+|     .o...o+o= . |
+|     . o   .*.   |
+|      + S E. *   |
+|   . o . .  + .  |
+|    B. o. o.     |
+|   o.++..+.      |
+|    o+. =+       |
++----[SHA256]-----+
+c1r5p3% cat ~/.ssh/id_ed25519.pub    
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM98OYvJoeVJlWZuak3Btifr30E5sRMo3NbyKsNofqte vvitor-d@c1r5p3.42sp.org.br
+c1r5p3% $> ssh-keygen -t ed25519 
+c1r5p3% git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-55577ce1-f4ee-4832-9e18-c64d9d252800-4725131-vvitor-d DEVitor
+Cloning into 'DEVitor'...
+The authenticity of host 'vogsphere-v2.42sp.org.br (10.51.0.14)' can't be established.
+ECDSA key fingerprint is SHA256:rnzDSEbogYSKLnvAPwLJbiaxJa68IzJQRgiYt3T12Fw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+c1r5p3% git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-55577ce1-f4ee-4832-9e18-c64d9d252800-4725131-vvitor-d DEVitor
+Cloning into 'DEVitor'...
+The authenticity of host 'vogsphere-v2.42sp.org.br (10.51.0.14)' can't be established.
+ECDSA key fingerprint is SHA256:rnzDSEbogYSKLnvAPwLJbiaxJa68IzJQRgiYt3T12Fw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+c1r5p3% git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-55577ce1-f4ee-4832-9e18-c64d9d252800-4725131-vvitor-d DEVitor
+Cloning into 'DEVitor'...
+The authenticity of host 'vogsphere-v2.42sp.org.br (10.51.0.14)' can't be established.
+ECDSA key fingerprint is SHA256:rnzDSEbogYSKLnvAPwLJbiaxJa68IzJQRgiYt3T12Fw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'vogsphere-v2.42sp.org.br,10.51.0.14' (ECDSA) to the list of known hosts.
+warning: You appear to have cloned an empty repository.
+c1r5p3% cd DEVitor
+c1r5p3% ls
+c1r5p3% mkdir eu
+c1r5p3% cd eu
+c1r5p3% cp  ~/Downloads/aceito.txt .
+cp: cannot stat '/nfs/homes/vvitor-d/Downloads/aceito.txt': No such file or directory
+c1r5p3% cp  ~/Downloads/aceito.txt .
+c1r5p3% ls
+aceito.txt
+c1r5p3% git status                         
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+c1r5p3% pwd
+/nfs/homes/vvitor-d/DEVitor/eu
+c1r5p3% git add .
+c1r5p3% git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   aceito.txt
+
+c1r5p3% cd ..                           
+c1r5p3% pwd
+/nfs/homes/vvitor-d/DEVitor
+c1r5p3% cd ..
+c1r5p3% pwd
+/nfs/homes/vvitor-d
+c1r5p3% git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-892748bf-6d72-42c9-bd87-8f863eea660f-4725333-vvitor-d meuarquivo
+Cloning into 'meuarquivo'...
+warning: You appear to have cloned an empty repository.
+c1r5p3% cd meuarquivo
+c1r5p3% mkdir eu
+c1r5p3% cd eu
+c1r5p3% cp ~/Downloads/aceito.txt .
+c1r5p3% ls
+aceito.txt
+c1r5p3% git add .
+c1r5p3% git commit -m "subindo "
+[master (root-commit) 4c37631] subindo
+ Committer: Valter Vitor da silva filho <vvitor-d@c1r5p3.42sp.org.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 eu/aceito.txt
+c1r5p3% git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 493 bytes | 44.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-892748bf-6d72-42c9-bd87-8f863eea660f-4725333-vvitor-d
+ * [new branch]      master -> master
+
