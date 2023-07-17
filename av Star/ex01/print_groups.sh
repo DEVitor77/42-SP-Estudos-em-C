@@ -1,1 +1,0 @@
-groups bocal |tr ' ' ','
